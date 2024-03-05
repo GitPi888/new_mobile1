@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="hover">#DDDDDD</color>
+    <color name="navy">#000080</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPurple">#673AB7</color>
+    <color name="colorBlue">#3F51B5</color>
+    <color name="orange">#FF9800</color>
+    <color name="darkorange">#FF5722</color>
+    <color name="shadow_color">#3C3C3C</color>
+    <color name="colorRed">#CA1F41</color>
+    <color name="light_grey">#EDE0E0</color>
+    <color name="green">#2BBD63</color>
+    <color name="bnt_background_dialog">#FACFCF</color>
+    <color name="txt_btn_dialog">#EC1837</color>
+</resources>

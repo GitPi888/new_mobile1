@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="16dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical"
+            android:id="@+id/layout_dialog_top"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#888585"
+                android:id="@+id/txt_View1"
+                android:text="Are you sure you want to delete your account?"
+                android:layout_marginBottom="4dp"
+                android:textSize="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#888585"
+                android:id="@+id/txt_View2"
+                android:text="All data will be deleted."
+                android:textSize="20dp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_dialog_top"
+            android:layout_margin="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_dialog_Cancel1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="6dp"
+                android:layout_toLeftOf="@+id/btn_dialog_Delete"
+                android:backgroundTint="@android:color/transparent"
+                android:gravity="center|right"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:stateListAnimator="@null"
+                android:text="Cancel"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                tools:ignore="TextSizeCheck" />
+
+            <Button
+                android:id="@+id/btn_dialog_Delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#F6E5C1"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:text="Delete Account"
+                android:textColor="#FAD533"
+                android:textSize="16dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

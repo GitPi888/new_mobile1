@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activities.RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="171dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="278dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Welcome User"
+                android:textSize="42sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:text="Sign up to join"
+                android:textColor="#989898"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="110dp"
+            android:layout_height="153dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/add_user_profile_vector_png_image_plus_friend_new_icon" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#989898"
+        app:boxBackgroundMode="filled"
+        app:boxStrokeColor="#CF9FFF"
+        app:endIconCheckable="false"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/baseline_person_24"
+        app:startIconTint="#CF9FFF">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#EFEDED"
+            android:hint="Name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#989898"
+        app:boxBackgroundMode="filled"
+        app:boxStrokeColor="#CF9FFF"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@android:drawable/ic_dialog_email"
+        app:startIconTint="#CF9FFF">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#EFEDED"
+            android:hint="Email"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:textColorHint="#989898"
+        app:boxBackgroundMode="filled"
+        app:boxStrokeColor="#CF9FFF"
+        app:boxStrokeErrorColor="#F37878"
+        app:endIconMode="password_toggle"
+        app:endIconTint="#CF9FFF"
+        app:startIconDrawable="@drawable/baseline_add_moderator_24"
+        app:startIconTint="#CF9FFF">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#EFEDED"
+            android:hint="Password"
+            android:layout_marginBottom="16dp"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#989898"
+        app:boxBackgroundMode="filled"
+        app:boxStrokeColor="#CF9FFF"
+        app:counterEnabled="false"
+        app:endIconMode="password_toggle"
+        app:endIconTint="#CF9FFF"
+        app:startIconDrawable="@drawable/baseline_add_moderator_24"
+        app:startIconTint="#CF9FFF">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:backgroundTint="#EFEDED"
+            android:hint="Confirm Password"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="start"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:text="I agree to the"
+            android:textSize="18dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Term of Service"
+            android:textColor="#DA70D6"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="Have an account?"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="14dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/transparent"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="Sign In"
+            android:stateListAnimator="@null"
+            android:textColor="#DA70D6"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_Register_Confirm"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#CF9FFF"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_updatepassword"
+        android:text="Sign Up"
+        android:textSize="24sp"
+        app:cornerRadius="16dp" />
+
+</LinearLayout>

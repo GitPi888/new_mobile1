@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "479138036153",
+    "firebase_url": "https://quizzer-8a095-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "quizzer-8a095",
+    "storage_bucket": "quizzer-8a095.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479138036153:android:ddff757711b496274b1e68",
+        "android_client_info": {
+          "package_name": "com.example.demo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2iSWRdWRqH0gTZBQGmiNrETSfmwhQC90"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479138036153:android:cb0ac59baa25d0024b1e68",
+        "android_client_info": {
+          "package_name": "com.example.demo.Fragment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2iSWRdWRqH0gTZBQGmiNrETSfmwhQC90"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

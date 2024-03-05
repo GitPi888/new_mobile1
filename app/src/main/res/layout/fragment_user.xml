@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/user_Fragment"
+    tools:context=".Fragment.UserFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/txt_Header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CF9FFF"
+        android:padding="16dp"
+        android:text="Settings"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_Header"
+        android:id="@+id/scrollable"
+       android:layout_margin="24dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profile_container">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layout_Profile">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_Profile"
+                    android:drawableTint="#FFD600"
+                    android:layout_marginBottom="12dp"
+                    android:drawablePadding="10dp"
+                    android:text="Profile"
+                    android:textSize="20dp"
+                    android:drawableStart="@drawable/profile_icon"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_Username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_Profile"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/arrow_right" />
+                    <TextView
+                        android:id="@+id/txt_Email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textColor="@color/black"
+                        android:textSize="22dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_Email"
+                        android:text=""
+                        android:id="@+id/fragment_Email"
+                        android:textColor="#A9A9A9"
+                        android:textSize="22dp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_Username"
+                    android:id="@+id/layout_UserName">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Username"
+                        android:textSize="22dp"
+                        android:id="@+id/txt_Name"
+                        android:textColor="@color/black">
+                    </TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_Name"
+                        android:text=""
+                        android:id="@+id/fragment_Username"
+                        android:textColor="#A9A9A9"
+                        android:textSize="22dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/arrow_right"
+                        />
+
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_Account_Settings"
+                android:layout_below="@+id/layout_Profile">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_Header_Account"
+                    android:drawableTint="#DD2C00"
+                    android:text="Account settings"
+                    android:textSize="20dp"
+                    android:drawableStart="@drawable/account_st_icon"
+                    android:layout_marginBottom="12dp"
+                    android:drawablePadding="10dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_Header_Account"
+                    android:id="@+id/layout_inside_Account"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Update Password"
+                        android:id="@+id/txt_Update_Password"
+                        android:textSize="22dp"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="20dp"
+                        android:drawableEnd="@drawable/arrow_right"
+                        />
+                    <TextView
+                        android:id="@+id/txt_Delete_Account"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:text="Delete account"
+                        android:textColor="@color/black"
+                        android:textSize="22dp"
+                        android:drawableEnd="@drawable/arrow_right"/>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_Account_Settings"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Version:1"
+                    android:textColor="#C8A39F9F"
+                    android:padding="20dp"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contact us"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:textSize="20dp"
+                    android:textColor="#C8A39F9F"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Terms of service"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:padding="20dp"
+                    android:textColor="#C8A39F9F"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/btn_Logout"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="#CF9FFF"
+                    android:background="@drawable/btn_updatepassword"
+                    android:textColor="@color/white"
+                    android:padding="12dp"
+                    android:text="Log out"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

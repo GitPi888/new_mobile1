@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Home"
+        android:id="@+id/fragment_home"
+        android:icon="@drawable/baseline_home_24"
+        android:iconTint="@color/white"/>
+    <item
+        android:id="@+id/fragment_Homework"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/homework"
+        android:title="HomeWork"
+        android:iconTint="@color/white"/>
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragment_user"
+        android:icon="@drawable/baseline_person_24"
+        android:title="User"
+        android:iconTint="@color/white"/>
+
+</menu>
