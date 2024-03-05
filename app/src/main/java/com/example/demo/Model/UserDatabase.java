@@ -130,6 +130,7 @@ public class UserDatabase extends SQLiteOpenHelper {
     public boolean DeleteUser(String email){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor c = db.rawQuery("Select*from USER where EMAIL=?",new String[]{email});
+        //12323213
         if(c.getCount()>0)
         {
             long rs = db.delete("USER","EMAIL=?",new String[]{email});
