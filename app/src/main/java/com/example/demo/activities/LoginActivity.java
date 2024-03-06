@@ -46,10 +46,6 @@ public class LoginActivity extends AppCompatActivity {
             if(db.login(email,edt_Password)==1)
             {
                 Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
-                SharedPreferences share = getSharedPreferences("share_prefs", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = share.edit();
-                editor.putString("email",email);
-                editor.apply();
                 Intent intent = new Intent(LoginActivity.this, home_page.class);
                 intent.putExtra("key_email",email);
                 intent.putExtra("key_password",edt_Password);
@@ -86,30 +82,30 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Drawable icError = getResources().getDrawable(R.drawable.ic_error);
-                icError.setBounds(0,0,icError.getIntrinsicWidth(), icError.getIntrinsicHeight());
-                String name = txtName.getText().toString().trim();
-                String pass = txtPass.getText().toString().trim();
-                if(name.isEmpty()){
-                    txtName.setCompoundDrawables(null,null,icError,null);
-                    txtName.setError("Please add name");
-                }
-                if(pass.isEmpty()){
-                    txtPass.setCompoundDrawables(null,null,icError,null);
-                    txtPass.setError("Please add password");
-                }
-                if(!pass.isEmpty() && !name.isEmpty()){
-                    txtPass.setCompoundDrawables(null,null,null,null);
-                    txtPass.setCompoundDrawables(null,null,null,null);
-                    Intent intent = new Intent(LoginActivity.this, home_page.class);
-                    startActivity(intent);
-                    finish();
-                }
-            }
-        });
+//        btnLogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Drawable icError = getResources().getDrawable(R.drawable.ic_error);
+//                icError.setBounds(0,0,icError.getIntrinsicWidth(), icError.getIntrinsicHeight());
+//                String name = txtName.getText().toString().trim();
+//                String pass = txtPass.getText().toString().trim();
+//                if(name.isEmpty()){
+//                    txtName.setCompoundDrawables(null,null,icError,null);
+//                    txtName.setError("Please add name");
+//                }
+//                if(pass.isEmpty()){
+//                    txtPass.setCompoundDrawables(null,null,icError,null);
+//                    txtPass.setError("Please add password");
+//                }
+//                if(!pass.isEmpty() && !name.isEmpty()){
+//                    txtPass.setCompoundDrawables(null,null,null,null);
+//                    txtPass.setCompoundDrawables(null,null,null,null);
+//                    Intent intent = new Intent(LoginActivity.this, home_page.class);
+//                    startActivity(intent);
+//                    finish();
+//                }
+//            }
+//        });
 
         btnFB.setOnClickListener(new View.OnClickListener() {
             @Override

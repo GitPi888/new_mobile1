@@ -96,7 +96,7 @@ public class RegisterActivity extends AppCompatActivity {
         String confirmPassword= txtConfirm.getText().toString().trim();
         UserDatabase db = new UserDatabase(this);
         if(userName.length()==0||email.length()==0||passWord.length()==0||confirmPassword.length()==0) {
-            Toast.makeText(this, "Please input infor", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please input information", Toast.LENGTH_SHORT).show();
             return;
         }
         if(passWord.compareTo(confirmPassword)==0) {

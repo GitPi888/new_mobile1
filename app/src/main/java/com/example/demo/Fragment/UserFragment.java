@@ -1,5 +1,6 @@
 package com.example.demo.Fragment;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.database.Cursor;
@@ -152,8 +153,8 @@ public class UserFragment extends Fragment {
             }
         });
         relativeLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+           @Override
+           public void onClick(View v) {
 
             }
         });

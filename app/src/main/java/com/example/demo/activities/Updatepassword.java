@@ -3,7 +3,8 @@ package com.example.demo.activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 
-import com.example.demo.Fragment.UserFragment;
 import com.example.demo.Model.UserDatabase;
 import com.example.demo.R;
 
@@ -27,26 +27,25 @@ public class Updatepassword extends AppCompatActivity {
         setContentView(R.layout.activity_updatepassword);
         controller();
         setClick();
-        Toolbar toolbar= findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        img_back=findViewById(R.id.icon_back);
-        img_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-
     }
     private void controller(){
         input_Email=getIntent().getStringExtra("key_email");
         input_Password=getIntent().getStringExtra("key_password");
         edt_current =findViewById(R.id.current_pass);
         edt_new_password=findViewById(R.id.new_pass);
+        img_back=findViewById(R.id.icon_back);
         edt_confirm_pass=findViewById(R.id.confirm_pass);
         btn_set=findViewById(R.id.btn_set);
+        Toolbar toolbar= findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
     }
     private void setClick(){
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         btn_set.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

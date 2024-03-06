@@ -70,7 +70,6 @@ public class QuestionActivity extends AppCompatActivity {
         question = findViewById(R.id.question);
         process = findViewById(R.id.textViewProcess);
         option_container = findViewById(R.id.option_layout);
-        shareBtn = findViewById(R.id.shareBtn);
         nextBtn = findViewById(R.id.nextBtn);
         category = getIntent().getStringExtra("category");
         setNo = getIntent().getIntExtra("setNo",1);

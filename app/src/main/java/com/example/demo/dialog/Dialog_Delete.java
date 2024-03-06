@@ -1,13 +1,16 @@
 package com.example.demo.dialog;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Layout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -24,6 +27,7 @@ import com.example.demo.activities.LoginActivity;
 
 public class Dialog_Delete extends DialogFragment {
     private static final String TAG = "Dialog_Delete";
+    private  Window window;
     Button btn_Delete,btn_Cancel;
     LinearLayout linearLayout;
     TextView txt1,txt2;
@@ -50,11 +54,8 @@ public class Dialog_Delete extends DialogFragment {
         btn_Delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    linearLayout.setBackgroundColor(000000);
                     txt1.setText("Are you sure to your account will be deleted all information?");
                     txt1.setTextColor(Color.RED);
-                    btn_Cancel.setEnabled(false);
-                    btn_Cancel.setText(" ");
                     txt2.setText("This is your email:"+email_value);
                     txt2.setTextColor(Color.RED);
                     btn_Delete.setText("Confirm");

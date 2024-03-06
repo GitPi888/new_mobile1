@@ -35,9 +35,9 @@
             android:layout_margin="16dp"
             android:background="@drawable/round_txt"
             android:padding="16dp"
-            android:text="TextView"
+            android:text=""
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
@@ -50,14 +50,14 @@
             android:textSize="20sp" />
 
     </LinearLayout>
-
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
     <LinearLayout
         android:id="@+id/option_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
-
         <Button
             android:id="@+id/q1"
             android:layout_width="368dp"
@@ -68,7 +68,7 @@
             android:backgroundTintMode="multiply"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="Question 1"
+            android:text=""
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -85,7 +85,7 @@
             android:backgroundTintMode="multiply"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="Question 2"
+            android:text=""
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -102,7 +102,7 @@
             android:backgroundTintMode="multiply"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="Question 3"
+            android:text=""
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -119,36 +119,30 @@
             android:backgroundTintMode="multiply"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="Question 4"
+            android:text=""
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold"
             app:backgroundTint="#E0B0FF"
             app:cornerRadius="16dp" />
+
     </LinearLayout>
 
+</ScrollView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
-
-        <Button
-            android:id="@+id/shareBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#8E8D8D"
-            android:text="Share" />
-
         <Button
             android:id="@+id/nextBtn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:layout_weight="1"
             android:alpha="0.7"
+            android:textSize="20dp"
+            android:textColor="@color/white"
             android:backgroundTint="#DA70D6"
             android:enabled="false"
             android:text="Next" />
     </LinearLayout>
-
 </LinearLayout>
