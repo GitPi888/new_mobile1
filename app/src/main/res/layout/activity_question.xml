@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="10dp"
-        android:text="QuiZz"
+        android:text="Quizz"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -125,7 +125,6 @@
             android:textStyle="bold"
             app:backgroundTint="#E0B0FF"
             app:cornerRadius="16dp" />
-
     </LinearLayout>
 
 </ScrollView>

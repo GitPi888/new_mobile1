@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,6 +54,9 @@ public class QuestionActivity extends AppCompatActivity {
     private String category;
 
     private int setNo;
+    private CountDownTimer countDownTimer;
+    private long timeLeftInMillis; // Thời gian còn lại tính bằng mili giây
+
 
     private Dialog loadingDialog;
     @Override
@@ -61,8 +65,9 @@ public class QuestionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_question);
         addControl();
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(getIntent().getStringExtra("title"));
+        timeLeftInMillis = 1 * 60 * 1000; // set time for clock
+        startTimer();
     }
 
     private void addControl(){
@@ -182,6 +187,33 @@ public class QuestionActivity extends AppCompatActivity {
                     }
                 });
     }
+    private void startTimer() {
+        countDownTimer = new CountDownTimer(timeLeftInMillis, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timeLeftInMillis = millisUntilFinished;
+                updateTimerText();
+            }
+
+            @Override
+            public void onFinish() {
+                Toast.makeText(QuestionActivity.this, "Ran out of time", Toast.LENGTH_SHORT).show();
+                finish();
+
+            }
+        }.start();
+    }
+    private void updateTimerText() {
+        long minutes = (timeLeftInMillis / (1000 * 60)) % 60;
+        long seconds = (timeLeftInMillis / 1000) % 60;
+
+        String timeString = String.format("%02d:%02d", minutes, seconds);
+
+        // Đặt giá trị đồng hồ đếm trên thanh toolbar
+        getSupportActionBar().setSubtitle("Time: " + timeString);
+    }
+
+
 
     private void checkAnswer(Button selectOption){
         enableOption(false);
