@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#CF9FFF"
+        android:background="#58CC02"
         android:orientation="vertical">
         <TextView
             android:id="@+id/textView7"
@@ -69,7 +69,7 @@
             android:textSize="20dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:backgroundTint="#CF9FFF"
+            android:backgroundTint="#58CC02"
             android:text="DONE"
             android:textColor="@color/white" />
     </FrameLayout>
