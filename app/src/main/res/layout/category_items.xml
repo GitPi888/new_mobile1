@@ -1,48 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/category_view"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="15dp"
-    android:background="?attr/selectableItemBackground"
-    android:backgroundTint="#FFFFFF"
-    android:gravity="center"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="30dp">
+    android:gravity="center"
+    android:background="#FFFFFF">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFFFFF"
-        android:backgroundTint="#FFFFFF"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:paddingBottom="16dp">
+    <!-- Nút tròn với hình ngôi sao -->
+    <ImageButton
 
-        <ImageView
-            android:id="@+id/category_image"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/_23" />
+        android:id="@+id/star_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/circular_button"
+        android:src="@drawable/ic_star"
+        android:scaleType="centerInside"
+        android:contentDescription="Star Button"
+        android:layout_margin="10dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:orientation="vertical">
+    <!-- Thêm các nút khác nếu cần -->
+<!--    <ImageButton-->
+<!--        android:id="@+id/star_button_2"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:background="@drawable/circular_button"-->
+<!--        android:src="@drawable/ic_star"-->
+<!--        android:scaleType="centerInside"-->
+<!--        android:contentDescription="Star Button 2"-->
+<!--        android:layout_margin="10dp" />-->
 
-            <TextView
-                android:id="@+id/tenSp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:gravity="center"
-                android:hint="Name"
-                android:textColor="#000000"
-                android:textSize="40sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-    </LinearLayout>
 </LinearLayout>

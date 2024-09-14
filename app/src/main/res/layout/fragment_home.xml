@@ -47,7 +47,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/view2"
             app:layout_constraintStart_toStartOf="@+id/view2"
             app:layout_constraintTop_toTopOf="@+id/view2"
-            app:srcCompat="@drawable/logo4" />
+            app:srcCompat="@drawable/doulingo" />
 
         <TextView
             android:id="@+id/textView7"
@@ -101,8 +101,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:textColor="#090909"
             android:layout_marginBottom="8dp"
             android:drawableStart="@drawable/bank"
+            android:drawableTint="#58CC02"
+            android:drawablePadding="10dp"
             android:text="Khám phá môn học"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -120,8 +123,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view2" />
-
+            app:layout_constraintTop_toBottomOf="@+id/view2"
+            app:layout_constraintVertical_bias="0.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

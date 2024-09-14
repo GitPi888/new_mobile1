@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
 import android.widget.ImageView;
 
 
@@ -28,8 +30,12 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         }, 4000);
-        ImageView loading = findViewById(R.id.loadingView);
-        Glide.with(this).load(R.drawable.loading).into(loading);
+        WebView wb= findViewById(R.id.web_view);
+        String url = "<iframe src=\"https://giphy.com/embed/buvA4PKyYdzv899UkV\" width=\"100%\" height=\"100%\" style=\"\" frameBorder=\"0\" class=\"giphy-embed\" allowFullScreen></iframe>";
+        wb.loadData(url,"text/html","utf-8");
+        wb.getSettings().setJavaScriptEnabled(true);
+        wb.setWebChromeClient(new WebChromeClient());
+//        Glide.with(this).load(R.drawable.loading).into(loading);
     }
 
 

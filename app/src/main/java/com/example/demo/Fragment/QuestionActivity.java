@@ -221,12 +221,12 @@ public class QuestionActivity extends AppCompatActivity {
         nextBtn.setAlpha(1);
         if(selectOption.getText().toString().equals(list.get(position).getAnswer())){
             score++;
-            selectOption.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#4CAF50")));
+            selectOption.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#58CC02")));
         }
         else {
             selectOption.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#ff0000")));
-            Button correctOption = (Button) option_container.findViewWithTag(list.get(position).getAnswer());
-            correctOption.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#4CAF50")));
+            //Button correctOption = (Button) option_container.findViewWithTag(list.get(position).getAnswer());
+            //correctOption.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#58CC02")));
         }
     }
 
@@ -234,7 +234,7 @@ public class QuestionActivity extends AppCompatActivity {
         for (int i = 0 ;i<4;i++){
             option_container.getChildAt(i).setEnabled(enable);
             if(enable){
-                option_container.getChildAt(i).setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#E0B0FF")));
+                option_container.getChildAt(i).setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#FFFFFF")));
         }
     }
 }

@@ -54,19 +54,19 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
         public CategoryViewholder(@NonNull View itemView) {
             super(itemView);
-            imageView =itemView.findViewById(R.id.category_image);
-            name = itemView.findViewById(R.id.tenSp);
+            imageView =itemView.findViewById(R.id.star_button);
+
             description= itemView.findViewById(R.id.sets);
 
         }
 
         private void setData(String url, String name,final int sets){
-            Glide.with(itemView.getContext()).load(url).into(imageView);
-            this.name.setText(name);
+            Glide.with(itemView.getContext()).load(url);
+//            this.name.setText(name);
             itemView.setOnClickListener((v -> {
                 Intent setIntent = new Intent(itemView.getContext(), CategoryDetails.class);
-                setIntent.putExtra("title",name);
-                setIntent.putExtra("sets",sets);
+//                setIntent.putExtra("title",name);
+//                setIntent.putExtra("sets",sets);
                 itemView.getContext().startActivity(setIntent);
             }));
         }
