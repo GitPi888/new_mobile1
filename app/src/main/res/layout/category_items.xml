@@ -1,31 +1,21 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:background="#FFFFFF">
+    >
 
     <!-- Nút tròn với hình ngôi sao -->
-    <ImageButton
+        <ImageButton
+            android:layout_centerHorizontal="true"
+            android:id="@+id/star_button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/circular_button"
+            android:contentDescription="Star Button"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_star" />
 
-        android:id="@+id/star_button"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/circular_button"
-        android:src="@drawable/ic_star"
-        android:scaleType="centerInside"
-        android:contentDescription="Star Button"
-        android:layout_margin="10dp" />
 
-    <!-- Thêm các nút khác nếu cần -->
-<!--    <ImageButton-->
-<!--        android:id="@+id/star_button_2"-->
-<!--        android:layout_width="100dp"-->
-<!--        android:layout_height="100dp"-->
-<!--        android:background="@drawable/circular_button"-->
-<!--        android:src="@drawable/ic_star"-->
-<!--        android:scaleType="centerInside"-->
-<!--        android:contentDescription="Star Button 2"-->
-<!--        android:layout_margin="10dp" />-->
 
-</LinearLayout>
+
+</RelativeLayout>

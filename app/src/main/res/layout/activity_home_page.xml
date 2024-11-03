@@ -6,18 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".activities.home_page">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/top_layout">
-
-    </RelativeLayout>
 
     <FrameLayout
+        android:id="@+id/bottom_FrameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/bottom_FrameLayout"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="2dp">
 
     </FrameLayout>
 

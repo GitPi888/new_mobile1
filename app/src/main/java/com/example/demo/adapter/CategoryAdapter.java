@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,6 +25,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     private List<Category> categoryList;
     private clickItem clickItem;
 
+
+
     public CategoryAdapter(List<Category> categoryList, clickItem clickItem) {
         this.categoryList = categoryList;
         this.clickItem = clickItem;
@@ -40,6 +43,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     @Override
     public void onBindViewHolder(@NonNull CategoryViewholder holder, int position) {
         holder.setData(categoryList.get(position).getUrl(), categoryList.get(position).getName(),categoryList.get(position).getSets());
+        ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) holder.itemView.getLayoutParams();
+
     }
 
     @Override
@@ -48,25 +53,25 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     }
 
     public static class CategoryViewholder extends RecyclerView.ViewHolder{
-        ImageView imageView;
+        ImageButton imageView;
         TextView name;
         TextView description;
 
         public CategoryViewholder(@NonNull View itemView) {
             super(itemView);
             imageView =itemView.findViewById(R.id.star_button);
-
             description= itemView.findViewById(R.id.sets);
 
         }
+
 
         private void setData(String url, String name,final int sets){
             Glide.with(itemView.getContext()).load(url);
 //            this.name.setText(name);
             itemView.setOnClickListener((v -> {
                 Intent setIntent = new Intent(itemView.getContext(), CategoryDetails.class);
-//                setIntent.putExtra("title",name);
-//                setIntent.putExtra("sets",sets);
+                setIntent.putExtra("title",name);
+                setIntent.putExtra("sets",sets);
                 itemView.getContext().startActivity(setIntent);
             }));
         }

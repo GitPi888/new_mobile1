@@ -1,0 +1,4 @@
+<resources>
+    <!-- Khoảng cách giữa các item là 10dp -->
+    <dimen name="item_spacing">10dp</dimen>
+</resources>

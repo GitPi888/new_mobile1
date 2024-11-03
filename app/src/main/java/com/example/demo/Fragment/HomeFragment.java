@@ -20,6 +20,7 @@ import com.example.demo.Model.Category;
 import com.example.demo.R;
 import com.example.demo.activities.CategoryDetails;
 import com.example.demo.adapter.CategoryAdapter;
+import com.example.demo.adapter.SpacingItemDecoration;
 import com.example.demo.clickItem;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -49,6 +50,11 @@ public class HomeFragment extends Fragment {
         categoryList = generateCategory();
         homeRecyclerView = rootView.findViewById(R.id.categoryList);
         homeRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+
+        int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.item_spacing);
+        homeRecyclerView.addItemDecoration(new SpacingItemDecoration(spacingInPixels));
+
         categoryAdapter = new CategoryAdapter(categoryList, new clickItem() {
             @Override
             public void onClickCategory(Category category) {
@@ -57,7 +63,6 @@ public class HomeFragment extends Fragment {
 
         });
         homeRecyclerView.setAdapter(categoryAdapter);
-
         myRef.child("Category").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
